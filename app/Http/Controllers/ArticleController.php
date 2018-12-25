@@ -9,6 +9,7 @@ class ArticleController extends Controller
 {
 	public function show($id)
 	{
+	    
 		DB::update('update articles set num=num+1 where id= ?',[$id]);
 //		DB::table('articles')->increment('num',1,['id' => $id ]);
 		
