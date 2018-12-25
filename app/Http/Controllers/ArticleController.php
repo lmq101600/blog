@@ -12,6 +12,7 @@ class ArticleController extends Controller
 		DB::update('update articles set num=num+1 where id= ?',[$id]);
 //		DB::table('articles')->increment('num',1,['id' => $id ]);
 		
+		
 		return view('article/show')->withArticle(Article::with('hasManyComments')->find($id));
 	}
 	public function add_star($id)
