@@ -10,6 +10,9 @@ class CommentController extends Controller
 	
 	public function store(Request $request)
 	{
+		echo 1;
+		
+		
 		if (Comment::create($request->all())) {
 			return redirect()->back();
 		} else {
