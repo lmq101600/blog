@@ -12,8 +12,17 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/about.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/base.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/index.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/info.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/infopic.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/m.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/share.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/time.css') }}" rel="stylesheet">
 </head>
 <body>
+
     <div id="app">
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
@@ -70,11 +79,24 @@
                 </div>
             </div>
         </nav>
+        
 
         @yield('content')
     </div>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/ab.js') }}"></script>
+    <script src="{{ asset('js/comm.js') }}"></script>
+    <script src="{{ asset('js/hc-sticky.js') }}"></script>
+    <script src="{{ asset('js/jquery.easyfader.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
+    <script src="{{ asset('js/modernizr.js') }}"></script>
+    <script src="{{ asset('js/page.js') }}"></script>
+    <script src="{{ asset('js/page2.js') }}"></script>
+    <script src="{{ asset('js/piccontent.min.js') }}"></script>
+    <script src="{{ asset('js/scrollReveal.js') }}"></script>
+    <script src="{{ asset('js/share.js') }}"></script>
+    <script src="{{ asset('js/time.js') }}"></script>
 </body>
 </html>

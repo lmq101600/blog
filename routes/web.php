@@ -33,5 +33,6 @@ Route::group(['middleware' => 'auth', 'namespace' => 'Admin', 'prefix' => 'admin
 });
 
 Route::get('article/{id}', 'ArticleController@show');
+Route::get('article/{id}', 'ArticleController@add_star');
 
 Route::post('comment', 'CommentController@store');
