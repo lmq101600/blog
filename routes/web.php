@@ -33,6 +33,13 @@ Route::group(['middleware' => 'auth', 'namespace' => 'Admin', 'prefix' => 'admin
 });
 
 Route::get('article/{id}', 'ArticleController@show');
-Route::get('article/{id}', 'ArticleController@add_star');
+Route::get('article/{id}/add_star', 'ArticleController@add_star');
 
 Route::post('comment', 'CommentController@store');
+
+Route::get('aboutme/', 'AboutmeController@index');
+Route::get('info/', 'InfoController@index');
+Route::get('list/', 'ListController@index');
+Route::get('share/', 'ShareController@index');
+Route::get('study/', 'StudyController@index');
+Route::get('time/', 'TimeController@index');

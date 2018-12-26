@@ -49,44 +49,44 @@
 {{--@endsection--}}
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+{{--<!DOCTYPE html>--}}
+{{--<html lang="en">--}}
+{{--<head>--}}
+    {{--<meta charset="utf-8">--}}
+    {{--<meta http-equiv="X-UA-Compatible" content="IE=edge">--}}
+    {{--<meta name="viewport" content="width=device-width, initial-scale=1">--}}
 
-    <title>Laravel</title>
+    {{--<title>Laravel</title>--}}
 
-    <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
-    <script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
+    {{--<link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">--}}
+    {{--<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>--}}
+    {{--<script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>--}}
+{{--</head>--}}
 
-<div id="title" style="text-align: center;">
-    <h1>Laravel</h1>
-    <div style="padding: 5px; font-size: 16px;">Laravel</div>
-</div>
-<hr>
-<div id="content">
-    <ul>
-        @foreach ($articles as $article)
-            <li style="margin: 50px 0;">
-                <div class="title">
-                    <a href="{{ url('article/'.$article->id) }}">
-                        <h4>{{ $article->title }}</h4>
-                    </a>
-                </div>
-                <div class="body">
-                    <p>{{ $article->body }}</p>
-                </div>
-            </li>
-        @endforeach
-    </ul>
-</div>
+{{--<div id="title" style="text-align: center;">--}}
+    {{--<h1>Laravel</h1>--}}
+    {{--<div style="padding: 5px; font-size: 16px;">Laravel</div>--}}
+{{--</div>--}}
+{{--<hr>--}}
+{{--<div id="content">--}}
+    {{--<ul>--}}
+        {{--@foreach ($articles as $article)--}}
+            {{--<li style="margin: 50px 0;">--}}
+                {{--<div class="title">--}}
+                    {{--<a href="{{ url('article/'.$article->id) }}">--}}
+                        {{--<h4>{{ $article->title }}</h4>--}}
+                    {{--</a>--}}
+                {{--</div>--}}
+                {{--<div class="body">--}}
+                    {{--<p>{{ $article->body }}</p>--}}
+                {{--</div>--}}
+            {{--</li>--}}
+        {{--@endforeach--}}
+    {{--</ul>--}}
+{{--</div>--}}
 
-</body>
-</html>
+{{--</body>--}}
+{{--</html>--}}
 
 
 
@@ -116,17 +116,18 @@
         <div class="logo"><a href="http://www.yangqq.com">LMQ</a></div>
         <h2 id="mnavh"><span class="navicon"></span></h2>
         <ul id="starlist">
-            <li><a href="index.html">网站首页</a></li>
-            <li><a href="about.html">关于我</a></li>
-            <li><a href="share.html">模板分享</a></li>
-            <li><a href="list.html">博客日记</a></li>
-            <li class="menu"><a href="fengmian.html">学无止境</a>
+            <li><a href="{{url('home/')}}">网站首页</a></li>
+            <li><a href="{{url('share/')}}">模板分享</a></li>
+            <li><a href="{{url('list/')}}">博客日记</a></li>
+      
+            <li class="menu"><a href="{{url('study/')}}">学无止境</a>
                 <ul class="sub">
                     <li><a href="#">慢生活</a></li>
                     <li><a href="#">美文欣赏</a></li>
                 </ul>
             </li>
-            <li><a href="time.html">时间轴</a></li>
+            <li><a href="{{url('time/')}}">时间轴</a></li>
+            <li><a href="{{url('aboutme/')}}">关于我</a></li>
         </ul>
         <div class="searchbox">
             <div id="search_bar" class="search_bar">
@@ -208,8 +209,8 @@
             </ul>
             @foreach ($articles as $article)
             <div class="blogs" data-scroll-reveal="enter bottom over 1s" >
-                <h3 class="blogtitle"><a href="{{url('article/'.$article->id)}}}">{{ $article->title }}</a></h3>
-                <span class="blogpic"><a href="{{url('article/'.$article->id)}}}" title=""><img src="{{asset('images/1.jpg')}}" alt=""></a></span>
+                <h3 class="blogtitle"><a href="{{url('article/'.$article->id)}}">{{ $article->title }}</a></h3>
+                <span class="blogpic"><a href="{{url('article/'.$article->id)}}" title=""><img src="{{asset('images/1.jpg')}}" alt=""></a></span>
                 <p class="blogtext">{{ $article->body }}</p>
                 <div class="bloginfo">
                     <ul>
