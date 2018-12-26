@@ -1,5 +1,6 @@
  @charset "gb2312";
 /*banner*/
+ 
 .banner { width: 68%; overflow: hidden; float: left; margin-bottom: 20px }
 .fader { position: relative; width: 100%; padding-top: 60%; font-family: "futura", arial; overflow: hidden; }
 .fader .slide { position: absolute; width: 100%; top: 0; z-index: 1; opacity: 0; height: 100%; }
@@ -21,7 +22,7 @@
 .toppic li span { position: absolute; top: 20px; left: 20px; padding: 6px 10px; background: rgba(54, 144, 207,.8); font-size: 12px; display: block; color: #FFF; border-radius: 3px; }
 .toppic li:hover i { opacity: 1; }
 .toppic li:last-child { margin-top: 16px }
-.r_box { width: 30%; float: right }
+.r_box { width: 30%; float: right; }
 .r_box h2 { color: #333; font-size: 14px; line-height: 30px; padding-left: 20px; background: #f8f8f8;    border-bottom: 1px solid #ddd;  }
 .r_box div { background: #fff; margin-bottom: 20px; overflow: hidden ;border: 1px solid #ddd;}
 .r_box div ul { padding: 10px; overflow: hidden }

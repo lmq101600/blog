@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,7 +23,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home')->withArticles(\App\Article::all());
+		$articles = DB::table('articles')->paginate(5);
+		return view('home', ['articles' => $articles]);
+//        return view('home')->withArticles(\App\Article::all());
 //        return view('home')->with('articles',\App\Article::all());
     }
 }

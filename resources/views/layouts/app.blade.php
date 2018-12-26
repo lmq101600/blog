@@ -9,19 +9,23 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
-
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/about.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/base.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/index.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/info.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/infopic.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/m.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/share.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/time.css') }}" rel="stylesheet">
+    {{--<link href="{{ asset('css/about.css') }}" rel="stylesheet">--}}
+    {{--<link href="{{ asset('css/base.css') }}" rel="stylesheet">--}}
+    {{--<link href="{{ asset('css/index.css') }}" rel="stylesheet">--}}
+    {{--<link href="{{ asset('css/info.css') }}" rel="stylesheet">--}}
+    {{--<link href="{{ asset('css/infopic.css') }}" rel="stylesheet">--}}
+    {{--<link href="{{ asset('css/m.css') }}" rel="stylesheet">--}}
+    {{--<link href="{{ asset('css/share.css') }}" rel="stylesheet">--}}
+    {{--<link href="{{ asset('css/time.css') }}" rel="stylesheet">--}}
+    
 </head>
 <body>
+<script type="text/javascript" src="{{ asset('cms/lib/jquery/1.9.1/jquery.min.js')}}"></script>
+<script type="text/javascript" src="{{ asset('cms/lib/layer/2.4/layer.js')}}"></script>
+<script type="text/javascript" src="{{ asset('cms/static/h-ui/js/H-ui.min.js')}}"></script>
+<script type="text/javascript" src="{{ asset('cms/static/h-ui.admin/js/H-ui.admin.js')}}"></script>
 
     <div id="app">
         <nav class="navbar navbar-default navbar-static-top">
@@ -62,12 +66,9 @@
 
                                 <ul class="dropdown-menu" role="menu">
                                     <li>
-                                        <a href="{{ route('logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                        <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
                                             Logout
                                         </a>
-
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                             {{ csrf_field() }}
                                         </form>
@@ -85,18 +86,6 @@
     </div>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
-    <script src="{{ asset('js/ab.js') }}"></script>
-    <script src="{{ asset('js/comm.js') }}"></script>
-    <script src="{{ asset('js/hc-sticky.js') }}"></script>
-    <script src="{{ asset('js/jquery.easyfader.min.js') }}"></script>
-    <script src="{{ asset('js/jquery.min.js') }}"></script>
-    <script src="{{ asset('js/modernizr.js') }}"></script>
-    <script src="{{ asset('js/page.js') }}"></script>
-    <script src="{{ asset('js/page2.js') }}"></script>
-    <script src="{{ asset('js/piccontent.min.js') }}"></script>
-    <script src="{{ asset('js/scrollReveal.js') }}"></script>
-    <script src="{{ asset('js/share.js') }}"></script>
-    <script src="{{ asset('js/time.js') }}"></script>
+
 </body>
 </html>
