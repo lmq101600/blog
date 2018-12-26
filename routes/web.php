@@ -30,6 +30,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['middleware' => 'auth', 'namespace' => 'Admin', 'prefix' => 'admin'], function() {
 	Route::get('/', 'HomeController@index');
 	Route::resource('articles', 'ArticleController');
+	Route::post('admin/article/destroy', 'ArticleController@destroy');
 	Route::get('welcome/', 'WelcomeController@index');
 });
 

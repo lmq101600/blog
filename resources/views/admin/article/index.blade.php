@@ -169,9 +169,11 @@
         layer.confirm('确认要删除吗？',function(index){
             $.ajax({
                 type: 'POST',
-                url: '',
-                dataType: 'json',
+                url: "{{ url('admin/article/destroy') }}",
+//                dataType: 'json',
+                data: {id:id},
                 success: function(data){
+                    alert(data);
                     $(obj).parents("tr").remove();
                     layer.msg('已删除!',{icon:1,time:1000});
                 },
