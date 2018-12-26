@@ -30,7 +30,6 @@
 {{--    <script src="{{ asset('js/modernizr.js') }}"></script>--}}
     {{--<script src="{{ asset('js/ab.js') }}"></script>--}}
     {{--<script src="{{ asset('js/piccontent.min.js') }}"></script>--}}
-   
 </head>
 <body>
 <header class="header-navigation" id="header">
@@ -38,18 +37,18 @@
         <div class="logo"><a href="http://www.yangqq.com">LMQ</a></div>
         <h2 id="mnavh"><span class="navicon"></span></h2>
         <ul id="starlist">
-            <li><a href="{{url('home/')}}">网站首页</a></li>
-            <li><a href="{{url('share/')}}">模板分享</a></li>
-            <li><a href="{{url('list/')}}">博客日记</a></li>
+            <li><a href="{{url('home/')}}" style="text-decoration: none;">网站首页</a></li>
+            <li><a href="{{url('share/')}}" style="text-decoration: none;">模板分享</a></li>
+            <li><a href="{{url('list/')}}" style="text-decoration: none;">博客日记</a></li>
 
-            <li class="menu"><a href="{{url('study/')}}">学无止境</a>
+            <li class="menu"><a href="{{url('study/')}}" style="text-decoration: none;">学无止境</a>
                 <ul class="sub">
                     <li><a href="#">慢生活</a></li>
                     <li><a href="#">美文欣赏</a></li>
                 </ul>
             </li>
-            <li><a href="{{url('time/')}}">时间轴</a></li>
-            <li><a href="{{url('aboutme/')}}">关于我</a></li>
+            <li><a href="{{url('time/')}}" style="text-decoration: none;">时间轴</a></li>
+            <li><a href="{{url('aboutme/')}}" style="text-decoration: none;">关于我</a></li>
         </ul>
         <div class="searchbox">
             <div id="search_bar" class="search_bar">
@@ -77,7 +76,7 @@
 
 <!-- 公共尾部代码 -->
 <footer>
-    <p>Design by <a href="http://www.yangqq.com" target="_blank">杨青个人博客</a> <a href="/">蜀ICP备11002373号-1</a><a href="/" class="links">友情链接</a></p>
+    <p>Design by <a href="http://www.yangqq.com" target="_blank">LMQ个人博客</a> <a href="/">京ICP备11002373号-1</a><a href="/" class="links">友情链接</a></p>
 </footer>
 <a href="#" class="cd-top">Top</a>
 

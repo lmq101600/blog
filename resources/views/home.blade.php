@@ -98,6 +98,7 @@
     <link href="{{ asset('css/base.css') }}" rel="stylesheet">
     <link href="{{ asset('css/index.css') }}" rel="stylesheet">
     <link href="{{ asset('css/m.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <script src="{{ asset('js/jquery.min.js') }}"></script>
     <script src="{{ asset('js/jquery.easyfader.min.js') }}"></script>
     <script src="{{ asset('js/hc-sticky.js') }}"></script>
@@ -178,7 +179,7 @@
                 <div class="bloginfo">
                     <ul>
                         <li class="author"><a href="/">lmq</a></li>
-                        <li class="lmname"><a href="/">学无止境</a></li>
+                        <li class="lmname"><a href="{{url('study/'.$article->id)}}">学无止境</a></li>
                         <li class="timer">{{$article->updated_at}}</li>
                         <li class="view"><span>{{$article->num}}</span>已阅读</li>
                         <li class="like">{{$article->star}}</li>
@@ -186,6 +187,7 @@
                 </div>
             </div>
             @endforeach
+            {{ $articles->links() }}
             {{--<div class="blogs" data-scroll-reveal="enter bottom over 1s" >--}}
                 {{--<h3 class="blogtitle"><a href="/" target="_blank">别让这些闹心的套路，毁了你的网页设计!</a></h3>--}}
                 {{--<span class="bplist"><a href="/" title="">--}}
@@ -227,7 +229,7 @@
             <h2>博主简介</h2>
             <ul>
                 <i><img src="images/4.jpg"></i>
-                <p><b>杨青</b>，一个80后草根女站长！09年入行。一直潜心研究web前端技术，一边工作一边积累经验，分享一些个人博客模板，以及SEO优化等心得。</p>
+                <p><b>LMQ</b>，一个80后草根女站长！09年入行。一直潜心研究web前端技术，一边工作一边积累经验，分享一些个人博客模板，以及SEO优化等心得。</p>
             </ul>
         </div>
         <div class="wdxc">
@@ -247,6 +249,9 @@
                 <li><a href="/">学无止境（33）</a></li>
                 <li><a href="/">日记（19）</a></li>
                 <li><a href="/">慢生活（520）</a></li>
+                <li><a href="/">美文欣赏（40）</a></li>
+                <li><a href="/">美文欣赏（40）</a></li>
+                <li><a href="/">美文欣赏（40）</a></li>
                 <li><a href="/">美文欣赏（40）</a></li>
             </ul>
         </div>
