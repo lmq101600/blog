@@ -30,9 +30,21 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['middleware' => 'auth', 'namespace' => 'Admin', 'prefix' => 'admin'], function() {
 	Route::get('/', 'HomeController@index');
 	Route::resource('articles', 'ArticleController');
+	Route::get('welcome/', 'WelcomeController@index');
 });
 
 Route::get('article/{id}', 'ArticleController@show');
-Route::get('article/{id}', 'ArticleController@add_star');
+Route::get('article/{id}/add_star', 'ArticleController@add_star');
 
 Route::post('comment', 'CommentController@store');
+
+Route::get('aboutme/', 'AboutmeController@index');
+Route::get('info/', 'InfoController@index');
+Route::get('list/', 'ListController@index');
+Route::get('share/', 'ShareController@index');
+
+
+Route::get('study/', 'StudyController@index');
+Route::get('study/{id}', 'StudyController@index');
+
+Route::get('time/', 'TimeController@index');
