@@ -28,13 +28,13 @@ class ArticleController extends Controller
 		$article->title = $request->get('title');
 		$article->body = $request->get('body');
 		$article->keywords = $request->get('keywords');
-		$article->articlesort = $request->get('articlesort');
-		$article->articlecolumn = $request->get('articlecolumn');
-		$article->articletype = $request->get('articletype');
-//		$article->author = $request->get('author');
-		$article->allowcomments = 1;
-		$article->commentdatemin = $request->get('commentdatemin');
-		$article->commentdatemax = $request->get('commentdatemax');
+//		$article->articlesort = $request->get('articlesort');
+//		$article->articlecolumn = $request->get('articlecolumn');
+//		$article->articletype = $request->get('articletype');
+////	$article->author = $request->get('author');
+//		$article->allowcomments = 1;
+//		$article->commentdatemin = $request->get('commentdatemin');
+//		$article->commentdatemax = $request->get('commentdatemax');
 		$article->user_id = $request->user()->id;
 		if($article->save()) {
 //			return redirect('admin/articles');
@@ -68,12 +68,6 @@ class ArticleController extends Controller
 				'title' => $request->get('title'),
 				'body' => $request->get('body'),
 				'keywords' => $request->get('keywords'),
-				'articlesort' => $request->get('articlesort'),
-				'articlecolumn' => $request->get('articlecolumn'),
-				'articletype' => $request->get('articletype'),
-				'allowcomments' => 1,
-				'commentdatemin' => $request->get('commentdatemin'),
-				'commentdatemax' => $request->get('commentdatemax'),
 				'user_id' => $request->user()->id,
 			]);
 		if($a) {

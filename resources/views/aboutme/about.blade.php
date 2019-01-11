@@ -50,8 +50,7 @@
     </div>
     <div class="abox">
         <h2>博主简介</h2>
-        <div class="biji-content" id="content"> 杨青，女，一个80后草根女站长！09年入行。一直潜心研究web前端技术，一边工作一边积累经验，分享一些个人博客模板，以及SEO优化等心得。我入行早，大家也亲切的叫我“青姐”。
-            SEO奋斗了将近两年时间，个人博客网站百度排名也从之前的30页后，排到了第一页。期间有很多的不容易，但是都没有放弃过。入了这一行，就深深的喜欢上它。 </div>
+        <div class="biji-content" id="content"> LMQ，男，一个90后草根女站长！01年入行。一直潜心研究web前端技术，一边工作一边积累经验，分享一些个人博客模板，以及SEO优化等心得。SEO奋斗了将近两年时间，个人博客网站百度排名也从之前的30页后，排到了第一页。期间有很多的不容易，但是都没有放弃过。入了这一行，就深深的喜欢上它。 </div>
         <div class="navlist">
             <ul>
                 <li class="navcurrent"><a href="#top1">基本信息</a> </li>
@@ -64,7 +63,7 @@
         <div class="navtab">
             <div class="navitem" style="display: block;" name = "top1">
                 <div class="content">
-                    <p>网名：dancesmile | 杨青</p>
+                      <p>网名：dancesmile | LMQ</p>
                     <p>职业：Web前端设计师、网页设计 </p>
                     <p>邮箱：dancesmiling@qq.com</p>
                     <p>个人微信：</p>

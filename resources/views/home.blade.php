@@ -132,50 +132,54 @@
                 <span>学无止境</span> </a> </li>
     </div>
     <main>
-        <div class="news_box">
-            <ul>
-                <li><i><a href="/"><img src="images/1.jpg"></a></i>
-                    <h3><a href="/">html5个人博客模板《simple》</a></h3>
-                </li>
-                <li><i><a href="/"><img src="images/2.jpg"></a></i>
-                    <h3><a href="/">html5古典个人博客模板《青砖屋檐》</a></h3>
-                </li>
-                <li><i><a href="/"><img src="images/3.jpg"></a></i>
-                    <h3><a href="/">第二届 优秀个人博客模板比赛参选活动</a></h3>
-                </li>
-                <li><i><a href="/"><img src="images/4.jpg"></a></i>
-                    <h3><a href="/">html5个人博客模板《More》</a></h3>
-                </li>
-                <li><i><a href="/"><img src="images/5.jpg"></a></i>
-                    <h3><a href="/">D设计师博客-一个热爱生活的设计师</a></h3>
-                </li>
-                <li><i><a href="/"><img src="images/6.jpg"></a></i>
-                    <h3><a href="/">个人博客用帝国cms 自定义页面 灵动标签调用网站所有信息</a></h3>
-                </li>
-            </ul>
-        </div>
-        <div class="pics">
-            <ul>
-                <li><i><a href="/news/life/2018-06-17/873.html" target="_blank"><img src="images/p1.jpg"></a></i><span>安静地做一个爱设计的女子</span></li>
-                <li><i><a href="/news/life/2018-04-27/816.html" target="_blank"><img src="images/p2.jpg"></a></i><span>个人博客，属于我的小世界！（可以是广告）</span></li>
-                <li><i><a href="/jstt/bj/2015-01-09/740.html" target="_blank"><img src="images/p3.jpg"></a></i><span>【匆匆那些年】总结个人博客经历的这四年…</span></li>
-            </ul>
-        </div>
+        {{--<div class="news_box">--}}
+            {{--<ul>--}}
+                {{--<li><i><a href="/"><img src="images/1.jpg"></a></i>--}}
+                    {{--<h3><a href="/">html5个人博客模板《simple》</a></h3>--}}
+                {{--</li>--}}
+                {{--<li><i><a href="/"><img src="images/2.jpg"></a></i>--}}
+                    {{--<h3><a href="/">html5古典个人博客模板《青砖屋檐》</a></h3>--}}
+                {{--</li>--}}
+                {{--<li><i><a href="/"><img src="images/3.jpg"></a></i>--}}
+                    {{--<h3><a href="/">第二届 优秀个人博客模板比赛参选活动</a></h3>--}}
+                {{--</li>--}}
+                {{--<li><i><a href="/"><img src="images/4.jpg"></a></i>--}}
+                    {{--<h3><a href="/">html5个人博客模板《More》</a></h3>--}}
+                {{--</li>--}}
+                {{--<li><i><a href="/"><img src="images/5.jpg"></a></i>--}}
+                    {{--<h3><a href="/">D设计师博客-一个热爱生活的设计师</a></h3>--}}
+                {{--</li>--}}
+                {{--<li><i><a href="/"><img src="images/6.jpg"></a></i>--}}
+                    {{--<h3><a href="/">个人博客用帝国cms 自定义页面 灵动标签调用网站所有信息</a></h3>--}}
+                {{--</li>--}}
+            {{--</ul>--}}
+        {{--</div>--}}
+        {{--<div class="pics">--}}
+            {{--<ul>--}}
+                {{--<li><i><a href="/news/life/2018-06-17/873.html" target="_blank"><img src="images/p1.jpg"></a></i><span>安静地做一个爱设计的女子</span></li>--}}
+                {{--<li><i><a href="/news/life/2018-04-27/816.html" target="_blank"><img src="images/p2.jpg"></a></i><span>个人博客，属于我的小世界！（可以是广告）</span></li>--}}
+                {{--<li><i><a href="/jstt/bj/2015-01-09/740.html" target="_blank"><img src="images/p3.jpg"></a></i><span>【匆匆那些年】总结个人博客经历的这四年…</span></li>--}}
+            {{--</ul>--}}
+        {{--</div>--}}
 
         <div class="blogtab">
-            <ul id="blogtab">
-                <li class="current">最新文章</li>
-                <li><a href="list.html">心得笔记</a></li>
-                <li><a href="list.html">CSS3|Html5</a></li>
-                <li><a href="list.html">网站建设</a></li>
-                <li><a href="list.html">文字标签</a></li>
-                <li><a href="list.html">文字广告</a></li>
-            </ul>
+            {{--<ul id="blogtab">--}}
+                {{--<li class="current">最新文章</li>--}}
+                {{--<li><a href="list.html">心得笔记</a></li>--}}
+                {{--<li><a href="list.html">CSS3|Html5</a></li>--}}
+                {{--<li><a href="list.html">网站建设</a></li>--}}
+                {{--<li><a href="list.html">文字标签</a></li>--}}
+                {{--<li><a href="list.html">文字广告</a></li>--}}
+            {{--</ul>--}}
             @foreach ($articles as $article)
             <div class="blogs" data-scroll-reveal="enter bottom over 1s" >
                 <h3 class="blogtitle"><a href="{{url('article/'.$article->id)}}">{{ $article->title }}</a></h3>
                 <span class="blogpic"><a href="{{url('article/'.$article->id)}}" title=""><img src="{{asset('images/1.jpg')}}" alt=""></a></span>
-                <p class="blogtext">{{ $article->body }}</p>
+                <p class="blogtext">
+
+            {{ $article->keywords }}
+
+                </p>
                 <div class="bloginfo">
                     <ul>
                         <li class="author"><a href="/">lmq</a></li>
@@ -224,37 +228,37 @@
             {{--</div>--}}
         </div>
     </main>
-    <aside class="r_box" >
-        <div class="about_me">
-            <h2>博主简介</h2>
-            <ul>
-                <i><img src="images/4.jpg"></i>
-                <p><b>LMQ</b>，一个80后草根女站长！09年入行。一直潜心研究web前端技术，一边工作一边积累经验，分享一些个人博客模板，以及SEO优化等心得。</p>
-            </ul>
-        </div>
-        <div class="wdxc">
-            <h2>图片精选</h2>
-            <ul>
-                <li><a href="/"><img src="images/7.jpg"></a></li>
-                <li><a href="/"><img src="images/8.jpg"></a></li>
-                <li><a href="/"><img src="images/9.jpg"></a></li>
-                <li><a href="/"><img src="images/10.jpg"></a></li>
-                <li><a href="/"><img src="images/11.jpg"></a></li>
-                <li><a href="/"><img src="images/12.jpg"></a></li>
-            </ul>
-        </div>
-        <div class="fenlei">
-            <h2>文章分类</h2>
-            <ul>
-                <li><a href="/">学无止境（33）</a></li>
-                <li><a href="/">日记（19）</a></li>
-                <li><a href="/">慢生活（520）</a></li>
-                <li><a href="/">美文欣赏（40）</a></li>
-                <li><a href="/">美文欣赏（40）</a></li>
-                <li><a href="/">美文欣赏（40）</a></li>
-                <li><a href="/">美文欣赏（40）</a></li>
-            </ul>
-        </div>
+    <aside class="r_box">
+        {{--<div class="about_me">--}}
+            {{--<h2>博主简介</h2>--}}
+            {{--<ul>--}}
+                {{--<i><img src="images/4.jpg"></i>--}}
+                {{--<p><b>LMQ</b>，一个80后草根女站长！09年入行。一直潜心研究web前端技术，一边工作一边积累经验，分享一些个人博客模板，以及SEO优化等心得。</p>--}}
+            {{--</ul>--}}
+        {{--</div>--}}
+        {{--<div class="wdxc">--}}
+            {{--<h2>图片精选</h2>--}}
+            {{--<ul>--}}
+                {{--<li><a href="/"><img src="images/7.jpg"></a></li>--}}
+                {{--<li><a href="/"><img src="images/8.jpg"></a></li>--}}
+                {{--<li><a href="/"><img src="images/9.jpg"></a></li>--}}
+                {{--<li><a href="/"><img src="images/10.jpg"></a></li>--}}
+                {{--<li><a href="/"><img src="images/11.jpg"></a></li>--}}
+                {{--<li><a href="/"><img src="images/12.jpg"></a></li>--}}
+            {{--</ul>--}}
+        {{--</div>--}}
+        {{--<div class="fenlei">--}}
+            {{--<h2>文章分类</h2>--}}
+            {{--<ul>--}}
+                {{--<li><a href="/">学无止境（33）</a></li>--}}
+                {{--<li><a href="/">日记（19）</a></li>--}}
+                {{--<li><a href="/">慢生活（520）</a></li>--}}
+                {{--<li><a href="/">美文欣赏（40）</a></li>--}}
+                {{--<li><a href="/">美文欣赏（40）</a></li>--}}
+                {{--<li><a href="/">美文欣赏（40）</a></li>--}}
+                {{--<li><a href="/">美文欣赏（40）</a></li>--}}
+            {{--</ul>--}}
+        {{--</div>--}}
         <div class="tuijian">
             <h2 id="tab"><a href="#"class="current">活动公告</a><a href="#">点击排行</a><a href="#">站长推荐</a></h2>
 
