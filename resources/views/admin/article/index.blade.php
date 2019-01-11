@@ -103,7 +103,7 @@
             <tr class="text-c">
                 <td><input type="checkbox" value="" name=""></td>
                 <td>{{ $article->id }}</td>
-                <td class="text-l"><u style="cursor:pointer" class="text-primary" onClick="article_edit('查看','article-zhang.html','10001')" title="查看">{{ $article->title }}</u></td>
+                <td class="text-l"><u style="cursor:pointer" class="text-primary" onClick="article_edit('查看','{{url("admin/articles/{$article->id}/edit")}}','10001')" title="查看">{{ $article->title }}</u></td>
                 <td>行业动态</td>
                 <td>{{ $article->image }}</td>
                 <td>{{ $article->updated_at }}</td>

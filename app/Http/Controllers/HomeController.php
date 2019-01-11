@@ -13,7 +13,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+//        $this->middleware('auth');
     }
 
     /**
@@ -23,7 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-		$articles = DB::table('articles')->paginate(5);
+		$articles = DB::table('articles')->orderBy('id','desc')->paginate(5);
 		return view('home', ['articles' => $articles]);
 //        return view('home')->withArticles(\App\Article::all());
 //        return view('home')->with('articles',\App\Article::all());

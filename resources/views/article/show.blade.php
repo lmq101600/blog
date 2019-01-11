@@ -16,7 +16,7 @@
 
     <h4>
         <a href="/"><< 返回首页</a>
-        <a href="{{ url('article/'.$article->id.'/add_star') }}">star</a>
+        <a href="{{ url('article/'.$article->id.'/add_star') }}" style="float: right;">star</a>
     </h4>
 
     <h1 style="text-align: center; margin-top: 50px;">{{ $article->title }}</h1>
@@ -25,9 +25,15 @@
         {{ $article->updated_at }}
     </div>
     <div id="content" style="margin: 20px;">
-        <p>
+   
+        <div id="doc-content">
+    <textarea style="display:none;">
             {{ $article->body }}
-        </p>
+    </textarea>
+        </div>
+        @include('markdown::decode',['editors'=>['doc-content']])
+
+      
     </div>
 
     <div id="comments" style="margin-top: 50px;">
@@ -45,19 +51,20 @@
                 <input type="hidden" name="article_id" value="{{ $article->id }}">
                 <div class="form-group">
                     <label>Nickname</label>
-                    <input type="text" name="nickname" class="form-control" style="width: 300px;" required="required">
+                    <input type="text" name="nickname" class="form-control" style="width: 100px;" required="required">
+                    
                 </div>
                 <div class="form-group">
                     <label>Email address</label>
-                    <input type="email" name="email" class="form-control" style="width: 300px;">
+                    <input type="email" name="email" class="form-control" style="width: 100px;">
                 </div>
                 <div class="form-group">
                     <label>Home page</label>
-                    <input type="text" name="website" class="form-control" style="width: 300px;">
+                    <input type="text" name="website" class="form-control" style="width: 100px;">
                 </div>
                 <div class="form-group">
                     <label>Content</label>
-                    <textarea name="content" id="newFormContent" class="form-control" rows="10" required="required"></textarea>
+                    <textarea name="content" id="newFormContent" class="form-control" rows="5" cols="5" required="required"></textarea>
                 </div>
                 <button type="submit" class="btn btn-lg btn-success col-lg-12">Submit</button>
             </form>
@@ -73,7 +80,6 @@
 
         <div class="conmments" style="margin-top: 100px;">
             @foreach ($article->hasManyComments as $comment)
-
                 <div class="one" style="border-top: solid 20px #efefef; padding: 5px 20px;">
                     <div class="nickname" data="{{ $comment->nickname }}">
                         @if ($comment->website)
@@ -100,6 +106,8 @@
     </div>
 
 </div>
+
+
 
 </body>
 </html>
