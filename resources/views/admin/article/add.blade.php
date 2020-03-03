@@ -180,14 +180,7 @@
                             data: {'_token':'{{ csrf_token() }}' ,
                                 'title':$(" #articletitle ").val(),
                                 'body': $(" #editormd ").val(),
-//                                'allowcomments':$(" #allowcomments ").val(),
-//                                'commentdatemin':$(" #commentdatemin ").val(),
-//                                'commentdatemax':$(" #commentdatemax ").val(),
-//                                'articlecolumn':$(" #articlecolumn ").val(),
-//                                'articletype':$(" #articletype ").val(),
-//                                'author':$(" #author ").val(),
                                 'keywords':$(" #keywords ").val(),
-//                                'articlesort':$(" #articlesort ").val(),
                             },
                             success: function(data){
                                 if(data.code == 0) {
